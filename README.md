@@ -1,7 +1,7 @@
 # Regional Electric Aviation: Fleet Reliability & Unit Economics Model
 ## Case Study: Eviation Alice Propulsion & Battery Telemetry
 
-This project bridges the gap between **Aircraft Physics** and **Fleet Economics**. 
+**#Aircraft Physics** **#Fleet Economics**. 
 
 ### Project Goal
 To evaluate the operational boundaries of the Eviation Alice (Cargo Variant) by analyzing high-frequency battery telemetry across 100+ simulated missions.
