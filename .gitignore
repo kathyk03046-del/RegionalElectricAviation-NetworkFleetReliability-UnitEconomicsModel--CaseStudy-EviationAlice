@@ -1,8 +1,11 @@
 **/aviation_data/
 
+!aviation_data/Alice_Master_Analysis_View.csv
+
 # macOS system files
 .DS_Store
 
 # Microsoft Office temporary files
 ~$*.xlsx
 ~$*.xls
+
