@@ -7,10 +7,10 @@ Case Study: Eviation Alice Propulsion & Battery Telemetry
 This project engineers a high-fidelity decision framework for the Eviation Alice (all-electric aircraft) fleet. By synthesizing 1Hz propulsion telemetry with strategic unit economics, I developed an analytical pipeline that predicts battery depletion with 96.1% accuracy and optimizes mission dispatching under an 8,000 kWh regional energy ceiling. The framework identifies the 750 lbs payload breakeven floor and quantifies a $1.01M annual profit lift achievable through algorithmic firmware optimization.
 
 ## Technical Architecture
-1. High-Fidelity Physics Simulation **(The Digital Twin)**: Built in Python to model non-linear energy drain across three flight phases (Climb, Cruise, Landing), incorporating payload mass and thermal impedance.
-2. Automated ETL & Signal Hygiene: Processed 442,297 rows of raw 1Hz data, implementing 98% time-domain **downsampling** to 1-minute intervals for analytical scalability.
-3. Predictive Intelligence: Iterated from a linear baseline to a 2nd-degree **Polynomial ML model**, capturing complex thermal-loading interactions to define the fleet's safe operational envelope.
-4. Operational ROI Engine: Exported ML weights into a standalone **Excel-based Solver** to maximize fleet EBITDA under specific energy and safety constraints using Linear Programming (Simplex LP).
+1. **Digital Twin**: Built in Python to model non-linear energy drain across three flight phases (Climb, Cruise, Landing), incorporating payload mass and thermal impedance.
+2. **Automated ETL & Signal Hygiene:** Processed 442,297 rows of raw 1Hz data, implementing 98% time-domain **downsampling** to 1-minute intervals for analytical scalability.
+3. **Predictive Intelligence:** Iterated from a linear baseline to a 2nd-degree **Polynomial ML model**, capturing complex thermal-loading interactions to define the fleet's safe operational envelope.
+4. **Operational ROI:** Exported ML weights into a standalone **Excel-based Solver** to maximize fleet EBITDA under specific energy and safety constraints using Linear Programming (Simplex LP).
 
 ## Key Findings
 * The 750 lbs Profit Floor: Under a base-case scenario ($2.25/lb rate | $0.18/kWh cost), missions under 750 lbs are programmatically flagged as non-viable, resulting in a -20% EBITDA margin due to fixed operational drag.
@@ -89,10 +89,10 @@ class AliceFleetManager:
 
 
 ## Improvement/Next steps:
-**Segmented High-Fidelity Modeling:** Transition from a universal regression model to Phase-Specific ML Models (Climb-specific vs. Cruise-specific). This would allow for even higher precision in the high-stress take-off phase, where energy consumption is most volatile.
+**Segmented Modeling:** Transition from a universal regression model to Phase-Specific ML Models (Climb-specific vs. Cruise-specific). This would allow for even higher precision in the high-stress take-off phase, where energy consumption is most volatile.
 
-**Stochastic Environmental Integration:** Incorporate real-time Wind-Vector Telemetry to quantify the impact of drag on safety reserves, moving the model toward a "Weather-Informed" dispatching system.
+**Stochastic Environmental:** Incorporate real-time Wind-Vector Telemetry to quantify the impact of drag on safety reserves, moving the model toward a "Weather-Informed" dispatching system.
 
 **Financial Integrity Loop:** Link Python-detected SoC anomalies directly to the Excel NPV model to calculate the Total Cost of Ownership (TCO) impact of premature battery degradation caused by frequent high-load missions.
 
-**Hardware-in-the-Loop (HIL):** Scale the current AliceFleetManager class to accept real-time sensor streams, transforming this static audit tool into a live Fleet Telemetry Monitoring System.
+**Hardware-in-the-Loop:** Scale the current AliceFleetManager class to accept real-time sensor streams, transforming this static audit tool into a live Fleet Telemetry Monitoring System.
