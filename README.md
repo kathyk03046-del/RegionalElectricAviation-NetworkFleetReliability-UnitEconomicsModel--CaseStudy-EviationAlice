@@ -11,6 +11,8 @@ This project engineers a high-fidelity decision framework for the Eviation Alice
 2. **Automated ETL & Signal Hygiene:** Processed 442,297 rows of raw 1Hz data, implementing 98% time-domain **downsampling** to 1-minute intervals for analytical scalability.
 3. **Predictive Intelligence:** Iterated from a linear baseline to a 2nd-degree **Polynomial ML model**, capturing complex thermal-loading interactions to define the fleet's safe operational envelope.
 4. **Operational ROI:** Exported ML weights into a standalone **Excel-based Solver** to maximize fleet EBITDA under specific energy and safety constraints using Linear Programming (Simplex LP).
+   
+<img width="1363" height="643" alt="image" src="https://github.com/user-attachments/assets/8b7c4ce2-2928-48c0-a6b1-0fe6f71e6200" />
 
 ## Key Findings
 * The 750 lbs Profit Floor: Under a base-case scenario ($2.25/lb rate | $0.18/kWh cost), missions under 750 lbs are programmatically flagged as non-viable, resulting in a -20% EBITDA margin due to fixed operational drag.
